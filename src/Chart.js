@@ -164,7 +164,7 @@ export default class Chart extends Component<void, any, any> {
 		const components = { 'line': LineChart, 'bar': BarChart, 'pie': PieChart };
 		const axisAlign = (this.props.type === 'line') ? 'left' : 'center';
 		return (
-			<View>
+			<View onLayout={this.props.onLayout}>
 				{(() => {
 					const ChartType = components[this.props.type] || BarChart;
 					if (this.props.showAxis && Chart !== PieChart) {
@@ -293,4 +293,5 @@ Chart.propTypes = {
 	// yAxisTitle: PropTypes.string,
 	yAxisTransform: PropTypes.func,
 	yAxisWidth: PropTypes.number,
+	onLayout: PropTypes.func,
 };
