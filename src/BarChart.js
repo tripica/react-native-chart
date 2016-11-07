@@ -45,7 +45,7 @@ export default class BarChart extends Component<void, any, any> {
 		}
 
 		const data = this.props.data || [];
-		const width = (WIDTH / data.length * this.props.horizontalScale * 0.5) * widthPercent;
+		const width = (WIDTH / data[0].length * this.props.horizontalScale * 0.5) * widthPercent;
 		const divisor = (maxBound - minBound <= 0) ? 0.00001 : (maxBound - minBound);
 		const scale = HEIGHT / divisor;
 		let height = HEIGHT - ((minBound * scale) + (HEIGHT - (dataPoint * scale)));
@@ -73,7 +73,7 @@ export default class BarChart extends Component<void, any, any> {
 		return (
 			<View ref="container" style={[styles.default]}>
 				<Grid {...this.props} />
-				{data.map(this._drawBar)}
+				{data[0].map(this._drawBar)}
 			</View>
 		);
 	}
