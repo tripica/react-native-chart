@@ -24,6 +24,7 @@ export default class YAxis extends Component<void, any, any> {
 		height: PropTypes.number.isRequired,
 		placement: PropTypes.oneOf(['left', 'right']),
 		verticalGridStep: PropTypes.number.isRequired,
+		showYAxisLabels: PropTypes.bool.isRequired,
 		yAxisTransform: PropTypes.func,
 		yAxisUseDecimal: PropTypes.bool,
 		yAxisShortLabel: PropTypes.bool
@@ -54,6 +55,7 @@ export default class YAxis extends Component<void, any, any> {
 	}
 
 	_createLabelForYAxis = (index : number) => {
+		if (!this.props.showYAxisLabels) return null;
 		let minBound = this.props.minVerticalBound;
 		let maxBound = this.props.maxVerticalBound;
 
