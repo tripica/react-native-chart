@@ -103,7 +103,7 @@ export default class Chart extends Component<void, any, any> {
 
 		// Exit if we want tight bounds
 		if (this.props.tightBounds) {
-			return this.setState({ bounds: { min, max } });
+			return this.setState({ bounds: { min: 0, max } });
 		}
 
 		max = getRoundNumber(max, this.props.verticalGridStep);
