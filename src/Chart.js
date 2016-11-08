@@ -103,6 +103,8 @@ export default class Chart extends Component<void, any, any> {
 
 		// Exit if we want tight bounds
 		if (this.props.tightBounds) {
+			// Adjustment
+			max = this.props.type === 'line' ? max * 1.3 : max * 1.1;
 			return this.setState({ bounds: { min: 0, max } });
 		}
 

@@ -7,6 +7,7 @@ import Grid from './Grid';
 const styles = StyleSheet.create({
 	default: {
 		flex: 1,
+		height: 130,
 		alignItems: 'flex-end',
 		flexDirection: 'row',
 		justifyContent: 'space-around',
