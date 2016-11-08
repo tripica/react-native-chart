@@ -268,6 +268,7 @@ Chart.propTypes = {
 	animationDuration: PropTypes.number,
 	axisColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	axisLabelColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+	labelFontFamily: PropTypes.string.isRequired,
 	axisLineWidth: PropTypes.number,
 	// axisTitleColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	// axisTitleFontSize: PropTypes.number,

@@ -21,6 +21,7 @@ export default class XAxis extends Component {
 	static propTypes = {
 		axisColor: PropTypes.any.isRequired,
 		axisLabelColor: PropTypes.any.isRequired,
+		labelFontFamily: PropTypes.string.isRequired,
 		axisLineWidth: PropTypes.number.isRequired,
 		data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.array)).isRequired,
 		showXAxisLabels: PropTypes.bool.isRequired,
@@ -69,6 +70,7 @@ export default class XAxis extends Component {
 									textAlign: this.props.align,
 									color: this.props.axisLabelColor,
 									fontSize: this.props.labelFontSize,
+									fontFamily: this.props.labelFontFamily,
 								},
 							]}
 						>{item}</Text>

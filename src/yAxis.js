@@ -20,6 +20,7 @@ export default class YAxis extends Component<void, any, any> {
 	static propTypes = {
 		axisColor: PropTypes.any,
 		axisLineWidth: PropTypes.number,
+		labelFontFamily: PropTypes.string.isRequired,
 		data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.array)).isRequired,
 		height: PropTypes.number.isRequired,
 		placement: PropTypes.oneOf(['left', 'right']),
@@ -27,7 +28,7 @@ export default class YAxis extends Component<void, any, any> {
 		showYAxisLabels: PropTypes.bool.isRequired,
 		yAxisTransform: PropTypes.func,
 		yAxisUseDecimal: PropTypes.bool,
-		yAxisShortLabel: PropTypes.bool
+		yAxisShortLabel: PropTypes.bool,
 	};
 
 	static defaultProps : any = {
@@ -85,6 +86,7 @@ export default class YAxis extends Component<void, any, any> {
 				style={{
 					color: this.props.axisLabelColor,
 					fontSize: this.props.labelFontSize,
+					fontFamily: this.props.labelFontFamily,
 				}}
 				key={index}
 			>
