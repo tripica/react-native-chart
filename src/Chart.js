@@ -173,7 +173,7 @@ export default class Chart extends Component<void, any, any> {
 						return (
 							<View
 								ref="container"
-								style={[this.props.style || {}, { flex: 1, flexDirection: 'column' }]}
+								style={this.props.style}
 								onLayout={this._onContainerLayout}
 							>
 								<View style={[styles.default, { flexDirection: 'row' }]}>
