@@ -1,6 +1,9 @@
-/* @flow */
 'use strict';
-import React, { Component, PropTypes } from 'react';
+
+/* @flow */
+import PropTypes from 'prop-types';
+
+import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
